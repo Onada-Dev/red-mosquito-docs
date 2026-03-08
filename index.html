@@ -157,9 +157,25 @@
     .fc h3 { font-family: 'Teko', sans-serif; font-size: 26px; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 9px; }
     .fc p { font-size: 13.5px; color: var(--tm); line-height: 1.66; }
 
-    /* RARITY */
-    #rarity { background: var(--bg); }
-    .rarity-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 60px; }
+    /* STATS ENGINE */
+    #stats-engine { background: var(--bg); }
+    .se-modules { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-top: 60px; margin-bottom: 60px; }
+    .se-mod { background: var(--card); border: 1px solid var(--cb); border-radius: 16px; padding: 32px 28px; position: relative; transition: border-color .25s, transform .25s; }
+    .se-mod:hover { border-color: rgba(255,255,255,.15); transform: translateY(-3px); }
+    .se-mod-status { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; margin-bottom: 16px; }
+    .se-live { background: rgba(76,175,80,.15); color: #4CAF50; border: 1px solid rgba(76,175,80,.3); }
+    .se-soon { background: rgba(232,143,61,.12); color: var(--amber); border: 1px solid rgba(232,143,61,.25); }
+    .se-mod-ico { font-size: 32px; margin-bottom: 14px; }
+    .se-mod h3 { font-family: 'Teko', sans-serif; font-size: 28px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; line-height: 1.1; }
+    .se-mod p { font-size: 13px; color: var(--tm); line-height: 1.66; }
+    .se-mod .se-factors { margin-top: 14px; }
+    .se-mod .se-factors span { display: inline-block; font-size: 10.5px; color: var(--tm); background: rgba(255,255,255,.04); border: 1px solid var(--cb); border-radius: 6px; padding: 3px 8px; margin: 2px 3px 2px 0; }
+    .se-divider { text-align: center; margin: 0 0 50px; }
+    .se-divider-line { display: inline-block; width: 60px; height: 1px; background: var(--cb); vertical-align: middle; }
+    .se-divider-text { display: inline-block; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--tm); padding: 0 16px; vertical-align: middle; }
+
+    /* RARITY DETAIL (inside stats engine) */
+    .rarity-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 40px; }
     .rtier { display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: var(--card); border: 1px solid var(--cb); border-radius: 10px; margin-bottom: 10px; transition: transform .2s, border-color .2s; }
     .rtier:hover { transform: translateX(5px); border-color: rgba(255,255,255,.15); }
     .tbadge { min-width: 108px; text-align: center; padding: 5px 10px; border-radius: 100px; font-size: 10.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
@@ -303,6 +319,7 @@
     @media(max-width:1000px) {
       .hero-inner { grid-template-columns: 1fr; }
       .hero-mascot { display: none; }
+      .se-modules { grid-template-columns: 1fr; }
       .rarity-layout { grid-template-columns: 1fr; gap: 40px; }
       .curation-grid { grid-template-columns: 1fr; }
       .cc.wide { grid-column: span 1; }
@@ -339,7 +356,7 @@
   </a>
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
-    <li><a href="#rarity">Rarity</a></li>
+    <li><a href="#stats-engine">Stats</a></li>
     <li><a href="#curation">Curation</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#community">Community</a></li>
@@ -412,11 +429,38 @@
   </div>
 </section>
 
-<section id="rarity">
+<section id="stats-engine">
   <div class="wrap">
-    <p class="s-label reveal">How Songs Are Scored</p>
-    <h2 class="s-title reveal">The Rarity<br><span class="accent">System</span></h2>
-    <p class="s-sub reveal">Every song gets a rarity tier based on how often it appears in setlists. Here's exactly how we calculate it.</p>
+    <p class="s-label reveal">The Analytics Stack</p>
+    <h2 class="s-title reveal">Stats<br><span class="accent">Engine</span></h2>
+    <p class="s-sub reveal">Three modules that turn 35 years of setlist data into meaningful insights. One is live. Two more are coming.</p>
+
+    <div class="se-modules">
+      <div class="se-mod reveal">
+        <span class="se-mod-status se-live">Live Now</span>
+        <div class="se-mod-ico">🎵</div>
+        <h3>Song Rarity Classifier</h3>
+        <p>Assigns each song to one of five tiers — Ultra Rare, Rare, Uncommon, Regular, or Staple — based on all-time play rate across 1,039 verified setlists. Powers the rarity badges throughout the app.</p>
+      </div>
+      <div class="se-mod reveal">
+        <span class="se-mod-status se-soon">Coming Soon</span>
+        <div class="se-mod-ico">📊</div>
+        <h3>Show Score Engine</h3>
+        <p>Scores any setlist 0&ndash;100 using 8 weighted factors. How rare was the set? Were there debuts? Bust-outs? Guest appearances? Every show gets a single number that captures what made it special.</p>
+        <div class="se-factors">
+          <span>Rarity mix</span><span>Debuts</span><span>Bust-outs</span><span>Set length</span><span>Guests</span><span>Encore depth</span><span>Cover ratio</span><span>Positional variety</span>
+        </div>
+      </div>
+      <div class="se-mod reveal">
+        <span class="se-mod-status se-soon">Coming Soon</span>
+        <div class="se-mod-ico">🏆</div>
+        <h3>Tour Rating Aggregator</h3>
+        <p>Rolls up individual show scores into a single tour-level rating. Compare any two tours head-to-head. See which runs delivered the deepest cuts, the most surprises, and the highest-scoring nights.</p>
+      </div>
+    </div>
+
+    <div class="se-divider reveal"><span class="se-divider-line"></span><span class="se-divider-text">Rarity System — Deep Dive</span><span class="se-divider-line"></span></div>
+
     <div class="rarity-layout">
       <div>
         <div class="rtier reveal"><span class="tbadge t1">Staple</span><div><div class="tier-n">Tier 1 — Staple</div><div class="tier-d">Played at the vast majority of shows. Near-certainties at any concert.</div></div></div>
@@ -637,7 +681,7 @@
       <h4>Explore</h4>
       <ul>
         <li><a href="#features">Features</a></li>
-        <li><a href="#rarity">Rarity System</a></li>
+        <li><a href="#stats-engine">Stats Engine</a></li>
         <li><a href="#curation">Data Curation</a></li>
         <li><a href="#counting">Show Eligibility</a></li>
       </ul>
