@@ -459,7 +459,7 @@
       </div>
     </div>
 
-    <div class="se-divider reveal"><span class="se-divider-line"></span><span class="se-divider-text">Rarity System — Deep Dive</span><span class="se-divider-line"></span></div>
+    <div class="se-divider reveal"><span class="se-divider-line"></span><span class="se-divider-text">Current Rarity Tiers</span><span class="se-divider-line"></span></div>
 
     <div class="rarity-layout">
       <div>
@@ -470,12 +470,12 @@
         <div class="rtier reveal"><span class="tbadge t5">Ultra Rare</span><div><div class="tier-n">Tier 5 — Ultra Rare</div><div class="tier-d">Played a handful of times ever. A once-in-a-decade event.</div></div></div>
       </div>
       <div class="reveal">
-        <h3 class="rm-h3">How We Calculate</h3>
-        <div class="fbox"><div class="flbl">Primary Score</div><div class="feq"><em>Rarity Score</em> = total_plays ÷ total_shows_with_setlists</div></div>
-        <div class="fbox"><div class="flbl">Tag Weight</div><div class="feq">Tags (brief teases/snippets) count as <em>0.5 plays</em> — not a full performance</div></div>
-        <p class="rnote"><strong>What counts as a "play"?</strong> A song appearing as a standalone setlist entry — full performance, debut, or cover. Songs only teased or quoted briefly are stored as tags on their host song and weighted at half credit.</p>
-        <p class="rnote"><strong>Tiers are percentile buckets</strong> across all 553 songs with at least one documented play. Songs with zero plays and no album association are hidden from the app entirely.</p>
-        <p class="rnote"><strong>Scores update</strong> whenever new shows are added. A song's tier can shift over time as Pearl Jam's setlist habits evolve across tours.</p>
+        <h3 class="rm-h3">Model in Development</h3>
+        <div class="fbox" style="border-color: rgba(232,143,61,.25); background: rgba(232,143,61,.06);">
+          <div class="flbl">Work in Progress</div>
+          <p style="font-size:13.5px; color:var(--tm); line-height:1.72; margin:0;">The current tier assignments are based on a preliminary scoring model and should be considered temporary. We're actively developing a more rigorous rarity methodology that accounts for recency, era weighting, and statistical significance — not just raw play counts. The full scoring model and its methodology will be published when it's ready.</p>
+        </div>
+        <p class="rnote">Tiers will shift as the model evolves. Songs currently classified in one tier may move up or down as we refine the math. That's the point — we'd rather get it right than get it early.</p>
       </div>
     </div>
   </div>
