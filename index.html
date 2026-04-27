@@ -179,6 +179,7 @@
     .rtier { display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: var(--card); border: 1px solid var(--cb); border-radius: 10px; margin-bottom: 10px; transition: transform .2s, border-color .2s; }
     .rtier:hover { transform: translateX(5px); border-color: rgba(255,255,255,.15); }
     .tbadge { min-width: 108px; text-align: center; padding: 5px 10px; border-radius: 100px; font-size: 10.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+    .t0 { background: linear-gradient(135deg,#FBBF24,#B45309); color: #0f0f0f; box-shadow: 0 0 14px rgba(251,191,36,.4); }
     .t1 { background: linear-gradient(135deg,#8B9AF0,#5563D8); color: #fff; box-shadow: 0 0 14px rgba(85,99,216,.35); }
     .t2 { background: linear-gradient(135deg,#5BAD8B,#3D8E6A); color: #fff; box-shadow: 0 0 14px rgba(61,142,106,.35); }
     .t3 { background: linear-gradient(135deg,#E8C13D,#C49B1A); color: #0f0f0f; box-shadow: 0 0 14px rgba(232,193,61,.35); }
@@ -379,13 +380,13 @@
         <div class="hstat"><div class="hstat-n">23K+</div><div class="hstat-l">Setlist Entries</div></div>
       </div>
       <div class="hero-ctas">
-        <a href="#" class="btn btn-red" style="opacity:.7;cursor:default;" onclick="return false;">
+        <a href="https://apps.apple.com/us/app/red-mosquito/id6760157405" class="btn btn-red" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          <span>App Store <span style="font-size:11px;font-weight:600;letter-spacing:1px;opacity:.8;">— Coming Soon</span></span>
+          <span>App Store</span>
         </a>
-        <a href="#" class="btn btn-ghost" style="opacity:.7;cursor:default;" onclick="return false;">
+        <a href="https://play.google.com/store/apps/details?id=com.redmosquito.app" class="btn btn-ghost" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.34.19.72.24 1.09.14L14.94 12 4.27.1c-.37-.1-.75-.05-1.09.14C2.49.63 2 1.43 2 2.27v19.46c0 .84.49 1.64 1.18 2.03zM16.94 14L5.4 20.54l9.23-9.23 2.31 2.69zM5.4 3.46L16.94 10l-2.31 2.69L5.4 3.46zM19.73 10.85l-2.28-1.32-2.6 3.02 2.6 3.02 2.29-1.33c.65-.38 1.06-1.05 1.06-1.85 0-.8-.41-1.46-1.07-1.54z"/></svg>
-          <span>Google Play <span style="font-size:11px;font-weight:600;letter-spacing:1px;opacity:.8;">— Coming Soon</span></span>
+          <span>Google Play</span>
         </a>
       </div>
     </div>
@@ -419,7 +420,7 @@
       <div class="fc reveal"><div class="fc-ico ia">🎸</div><h3>Shows</h3><p>Browse all 1,129 concerts. Flip between poster art and bootleg setlists. Filter by era or drummer. Toggle "My Show" for any show, with collapsible show notes, guest annotations, and direct links to setlist.fm and the bootleg shop.</p></div>
       <div class="fc reveal"><div class="fc-ico ir">🏟️</div><h3>Venues</h3><p>639 canonical venues across every country Pearl Jam has played. Blueprint-style venue maps, satellite imagery, alias timelines for renamed venues, and top songs played at each location. Sort by country or A-Z.</p></div>
       <div class="fc reveal"><div class="fc-ico ia">💿</div><h3>Albums</h3><p>All 12 studio albums plus <em>Lost Dogs</em>, each with full track listings linked to live histories. See every time a track was played live, when it debuted, and how often it surfaces in setlists.</p></div>
-      <div class="fc reveal"><div class="fc-ico ir">🎵</div><h3>Songs</h3><p>553 songs ranked Staple to Ultra Rare. Plays-by-year bar charts, full chronological performance timelines with poster thumbnails, search, sort by rarity or play count, and cover artist credits.</p></div>
+      <div class="fc reveal"><div class="fc-ico ir">🎵</div><h3>Songs</h3><p>621 songs catalogued across six rarity tiers — from <em>New</em> for current-tour songs through <em>Ultra Rare</em>. Plays-by-year bar charts, full chronological performance timelines with poster thumbnails, search, sort by rarity or play count, and cover artist credits.</p></div>
       <div class="fc reveal"><div class="fc-ico ic">📊</div><h3>Tour Stats</h3><p>Pick any tour and see the average setlist built position-by-position. Opener, closer, and encore probability. How the setlist evolved across legs. Which songs defined each run.</p></div>
       <div class="fc reveal"><div class="fc-ico ic">🗺️</div><h3>Concert Map</h3><p>Interactive world map plotting all 639 venues with color-coded markers showing show density. Tap any marker to jump to a venue. See every country and city Pearl Jam has ever touched.</p></div>
       <div class="fc reveal"><div class="fc-ico ia">👤</div><h3>My Journey</h3><p>Mark every show you've attended and see your personal stats instantly: concerts, unique songs heard, countries, venues, and drummer eras experienced. Explore "My Shows", "My Songs", "My Venues", and "My Countries".</p></div>
@@ -463,6 +464,7 @@
 
     <div class="rarity-layout">
       <div>
+        <div class="rtier reveal"><span class="tbadge t0">New</span><div><div class="tier-n">Tier 0 — New</div><div class="tier-d">Songs from the current album tour. Held outside the rarity scale until the tour ends.</div></div></div>
         <div class="rtier reveal"><span class="tbadge t1">Staple</span><div><div class="tier-n">Tier 1 — Staple</div><div class="tier-d">Played at the vast majority of shows. Near-certainties at any concert.</div></div></div>
         <div class="rtier reveal"><span class="tbadge t2">Regular</span><div><div class="tier-n">Tier 2 — Regular</div><div class="tier-d">Frequent but not guaranteed. A solid rotation pick at most tours.</div></div></div>
         <div class="rtier reveal"><span class="tbadge t3">Uncommon</span><div><div class="tier-n">Tier 3 — Uncommon</div><div class="tier-d">Appears occasionally. A pleasant surprise when it shows up.</div></div></div>
@@ -697,8 +699,8 @@
     <div class="f-col">
       <h4>Download</h4>
       <ul>
-        <li><a href="#" onclick="return false;" style="opacity:.6;cursor:default;">App Store — Coming Soon</a></li>
-        <li><a href="#" onclick="return false;" style="opacity:.6;cursor:default;">Google Play — Coming Soon</a></li>
+        <li><a href="https://apps.apple.com/us/app/red-mosquito/id6760157405" target="_blank" rel="noopener">App Store</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.redmosquito.app" target="_blank" rel="noopener">Google Play</a></li>
         <li><a href="/privacy-policy.html">Privacy Policy</a></li>
         <li><a href="/terms-of-service.html">Terms of Service</a></li>
         <li><a href="https://redmosquito.app">redmosquito.app</a></li>
